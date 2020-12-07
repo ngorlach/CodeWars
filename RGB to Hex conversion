@@ -1,0 +1,11 @@
+def rgb(r, g, b):
+    #your code here :)
+    rgbList = [r,g,b]
+    hexStr = ''
+    for i in rgbList:
+        if i>255:
+            i=255
+        if i<0:
+            i=0            
+        hexStr=hexStr+(hex(i)[2:].upper()).zfill(2)
+    return hexStr
