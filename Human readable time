@@ -1,0 +1,11 @@
+import math
+def make_readable(seconds):
+    # Do something
+    hr = seconds//3600
+    minsTemp = (seconds/3600-hr)*60
+    mins = math.floor(minsTemp)
+    secs = int(round((minsTemp-mins)*60))
+    if secs == 60:
+        secs = 0
+        mins += 1
+    return '{:02}:{:02}:{:02}'.format(hr,mins,secs)
