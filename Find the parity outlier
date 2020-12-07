@@ -1,0 +1,16 @@
+def find_outlier(integers):
+    even = 0
+    evenStore = 0
+    odd = 0
+    oddStore = 0
+    for i in range(len(integers)):
+        if integers[i]%2==0:
+            even += 1
+            evenStore = integers[i]
+        else:
+            odd += 1
+            oddStore = integers[i]
+    if even>odd:
+        return oddStore
+    else:
+        return evenStore
