@@ -1,0 +1,9 @@
+def printer_error(s):
+    # your code
+    good = 'abcdefghijklm'
+    bad = 'nopqrstuvwxyz'
+    count = 0
+    for i in s:
+        if i in bad:
+            count += 1
+    return '{}/{}'.format(count,len(s)) 
