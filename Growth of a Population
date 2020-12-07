@@ -1,0 +1,9 @@
+def nb_year(p0, percent, aug, p):
+    maxPop = p0
+    count = 0 
+    onePlusPercent = percent/100+1
+    while maxPop < p:
+        maxPop *= onePlusPercent
+        maxPop += aug
+        count += 1
+    return count
